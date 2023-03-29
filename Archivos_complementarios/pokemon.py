@@ -50,6 +50,25 @@ class Pokemon():
         if not isinstance(defense_rating, int) or defense_rating < 0 or defense_rating > 10:
             raise TypeError(
                 "El defense_rating debe ser un entero entre 0 y 10")
+    
+    def __del__(self):
+        print("Pokemon " + self.pokemon_name + " has been deleted")
+    
+    def is_alive(self):
+        return self.health_points > 0
+    
+    def fight_defense(self, points_of_damage):
+        if self.defense_rating > points_of_damage:
+            return False
+        else:
+            self.health_points = self.health_points - (points_of_damage - self.defense_rating)
+            return True
+        
+    def fight_attack(self, pokemon_to_attack):
+        return pokemon_to_attack.fight_defense(self.attack_rating)
+    
+    def __str__(self):
+        return "Pokemon id " + str(self.id) + " with name " + self.pokemon_name + " has as weapon " + self.weapon_type.name + " and health " + str(self.health_points)
 
     def get_id(self):
         return self.id
@@ -86,14 +105,6 @@ class Pokemon():
 
     def set_defense_rating(self, defense_rating):
         self.defense_rating = defense_rating
-        
-    def is_alive(self):
-        return self.health_points > 0
-
-""" Programe el método fight_attack(self, Pokémon pokemon_to_attack). Método que implementa el ataque del Pokémon usando un golpe sobre otro Pokémon. Este método se basa en el método fight_defense(self, int points_of_damage) del Pokémon atacado. Se aplicará el índice de ataque del Pokémon atacante como representación del golpe dado. Este método devolverá un booleano True si se ha podido atacar a la criatura Pokémon."""
-
-    def fight_attack(self, pokemon_to_attack):
-        
 
 
 def main():
