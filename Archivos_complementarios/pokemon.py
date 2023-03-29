@@ -26,7 +26,7 @@ this Python class.
               All rights are reserved. Reproduction in whole or in part is
               prohibited without the written consent of the copyright owner.
 """
-
+from weapon_type import WeaponType
 
 class Pokemon():
 
@@ -38,7 +38,7 @@ class Pokemon():
         if not isinstance(pokemon_name, str):
             raise TypeError("El pokemon_name debe ser un string")
         self.weapon_type = weapon_type
-        if not isinstance(weapon_type, weapon_type):
+        if not isinstance(weapon_type, WeaponType):
             raise TypeError("El weapon_type debe ser un weapon_type")
         self.health_points = health_points
         if not isinstance(health_points, int) or health_points < 0 or health_points > 100:
@@ -86,30 +86,17 @@ class Pokemon():
 
     def set_defense_rating(self, defense_rating):
         self.defense_rating = defense_rating
+        
+    def is_alive(self):
+        return self.health_points > 0
+
+""" Programe el método fight_attack(self, Pokémon pokemon_to_attack). Método que implementa el ataque del Pokémon usando un golpe sobre otro Pokémon. Este método se basa en el método fight_defense(self, int points_of_damage) del Pokémon atacado. Se aplicará el índice de ataque del Pokémon atacante como representación del golpe dado. Este método devolverá un booleano True si se ha podido atacar a la criatura Pokémon."""
+
+    def fight_attack(self, pokemon_to_attack):
+        
 
 
 def main():
-    """Function main of the module.
-
-    The function main of this module is used to test the Class that is described
-    in this module.
-
-    Syntax
-    ------
-      [ ] = main()
-
-    Parameters
-    ----------
-      Null .
-
-    Returns
-    -------
-      Null .
-
-    Example
-    -------
-      >>> main()
-    """
 
     print("=================================================================.")
     print("Test Case 1: Create a Pokemon.")
