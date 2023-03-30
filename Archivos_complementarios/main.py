@@ -47,78 +47,53 @@ def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
       lista_pokemon.remove(pokemon)
   return lista_pokemon
 
-
 def coach_is_undefeated(list_of_pokemons):
-  
-    """Function to know if the Coach is still undefeated.
-
-    This function is used in order to know if the Coach is still undefeated.
-
-    Syntax
-    ------
-       [ ] = coach_is_undefeated(list_of_pokemons)
-
-    Parameters
-    ----------
-       [in] list_of_pokemons List of the Pokemons that are associated to the
-                             coach.
-
-    Returns
-    -------
-       Boolean True if the coach has all her/his Pokemons defeated.
-               False if the coach has any Pokemon that is undefeated.
-
-    Example
-    -------
-       >>> coach_is_undefeated(list_of_pokemons)
-    """
-
+  if len(list_of_pokemons) == 0:
+    return False
+  return True
 
 def main():
-    """Function main of the module.
+  
+  print("Welcome to the Game.")
+  print("Let's start to set the configuration of each game user. \n")
 
-    The function main of this module is used to perform the Game.
+  pokemons_coach_1 = get_data_from_user("coach_1_pokemons.csv")
+  pokemons_coach_2 = get_data_from_user("coach_2_pokemons.csv")
+  
+  print("------------------------------------------------------------------")
+  print("The Game starts...")
+  print("------------------------------------------------------------------")
 
-    Syntax
-    ------
-      [ ] = main()
+  list_of_pokemons = {}
+  list_of_pokemons[1] = pokemons_coach_1
+  list_of_pokemons[2] = pokemons_coach_2
 
-    Parameters
-    ----------
-      Null .
+  # Get a copy of the list of pokemons:
+  # Choose first pokemons
+  # Main loop.
+  while coach_is_undefeated(list_of_pokemons[1]) and coach_is_undefeated(list_of_pokemons[2]):
+    if not list_of_pokemons[1][0].is_alive():
+      list_of_pokemons[1].remove(list_of_pokemons[1][0])
+      if not coach_is_undefeated(list_of_pokemons[1]):
+        break
+    if not list_of_pokemons[2][0].is_alive():
+      list_of_pokemons[2].remove(list_of_pokemons[2][0])
+      if not coach_is_undefeated(list_of_pokemons[2]):
+        break
+      
+      
+      
 
-    Returns
-    -------
-      Null .
+  print("------------------------------------------------------------------")
+  print("The Game has end...")
+  print("------------------------------------------------------------------")
 
-    Example
-    -------
-      >>> main()
-    """
-    print("Welcome to the Game.")
-    print("Let's start to set the configuration of each game user. \n")
+  print("------------------------------------------------------------------")
+  print("Statistics")
+  print("------------------------------------------------------------------")
+  print("Game User 1:")
 
-    # Get configuration for Game User 1.
-    # Get configuration for Game User 2.
-
-    print("------------------------------------------------------------------")
-    print("The Game starts...")
-    print("------------------------------------------------------------------")
-
-    # Get a copy of the list of pokemons:
-    # Choose first pokemons
-    # Main loop.
-
-    print("------------------------------------------------------------------")
-    print("The Game has end...")
-    print("------------------------------------------------------------------")
-
-    print("------------------------------------------------------------------")
-    print("Statistics")
-    print("------------------------------------------------------------------")
-    print("Game User 1:")
-
-    print("Game User 2:")
+  print("Game User 2:")
 
 
 # Checking whether this module is executed just itself alone.
