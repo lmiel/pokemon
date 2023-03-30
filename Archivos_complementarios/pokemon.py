@@ -48,8 +48,7 @@ class Pokemon():
             raise TypeError("El attack_rating debe ser un entero entre 0 y 10")
         self.defense_rating = defense_rating
         if not isinstance(defense_rating, int) or defense_rating < 0 or defense_rating > 10:
-            raise TypeError(
-                "El defense_rating debe ser un entero entre 0 y 10")
+            raise TypeError("El defense_rating debe ser un entero entre 0 y 10")
     
     def __del__(self):
         print("Pokemon " + self.pokemon_name + " has been deleted")

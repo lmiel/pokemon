@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from pokemon import Pokemon
+from weapon_type import WeaponType
 
 """
 This Python module contains not only the class Pokemon, but also the test of
@@ -31,68 +32,19 @@ this Python class.
 """
 
 
-# Source packages.
+class PokemonEarth(Pokemon):
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+        super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, 0)
+        self.defense_rating = defense_rating
+        if not isinstance(defense_rating, int) or defense_rating < 11 or defense_rating > 20:
+            raise TypeError(
+                "El defense_rating debe ser un entero entre 11 y 20")
 
-
-
-class PokemonEarth():
-    """Python class to implement a basic version of a Pokemon of the game.
-
-    This Python class implements the basic version of a Pokemon of the game.
-
-    Syntax
-    ------
-      obj = PokemonEarth(id, pokemon_name, weapon_type, health_points,
-                         attack_rating, defense_rating)
-
-    Parameters
-    ----------
-      [in] id ID of the Pokemon.
-      [in] pokemon_name Name of the Pokemon.
-      [in] weapon_type Type of weapon that carries out the Pokemon.
-      [in] health_points Points of health that the Pokemon has.
-      [in] attack_rating Attack rating of the Pokemon.
-      [in] defense_rating Defense rating of the Pokemon.
-
-    Returns
-    -------
-      obj Python object output parameter that represents an instance
-          of the class Pokemon.
-
-    Attributes
-    ----------
-
-    Example
-    -------
-      >>> from pokemon import Pokemon
-      >>> from weapon_type import WeaponType
-      >>> obj_Pokemon = PokemonEarth(1, "Diglett", WeaponType.PUNCH, 100, 7, 10)
-    """
+    def __str__(self):
+        return "Pokemon ID " + str(self.id) + " with name " + self.pokemon_name + " has as weapon " + self.weapon_type.name + " and health " + str(self.health_points)
 
 
 def main():
-    """Function main of the module.
-
-    The function main of this module is used to test the Class that is described
-    in this module.
-
-    Syntax
-    ------
-      [ ] = main()
-
-    Parameters
-    ----------
-      Null .
-
-    Returns
-    -------
-      Null .
-
-    Example
-    -------
-      >>> main()
-    """
-
     print("=================================================================.")
     print("Test Case 1: Create a Pokemon.")
     print("=================================================================.")
@@ -123,17 +75,15 @@ def main():
     else:
         print("Test FAIL. Check the method __init__().")
 
-
     print("=================================================================.")
     print("Test Case 2: Human-readable format of the object.")
     print("=================================================================.")
     pokemon_2 = PokemonEarth(7, "Diglett", WeaponType.HEADBUTT, 100, 7, 12)
-
     if str(pokemon_2) == "Pokemon ID 7 with name Diglett has as weapon HEADBUTT and health 100":
         print("Test PASS. The human-readable format of the object has been implemented correctly.")
     else:
-        print("Test FAIL. Check the method __str__()." + " RESULT: " + str(pokemon_2))
-
+        print("Test FAIL. Check the method __str__()." +
+              " RESULT: " + str(pokemon_2))
 
     print("=================================================================.")
     print("Test Case 3: Pokemon alive?¿?.")
@@ -141,7 +91,8 @@ def main():
     pokemon_3 = PokemonEarth(3, "Diglett", WeaponType.KICK, 97, 8, 15)
 
     if pokemon_3.is_alive():
-        pokemon_3.fight_defense(200)  # With this the Pokemon should be retired.
+        # With this the Pokemon should be retired.
+        pokemon_3.fight_defense(200)
 
         if not pokemon_3.is_alive():
             print("Test PASS. The method is_alive() has been implemented correctly.")
@@ -149,7 +100,6 @@ def main():
             print("Test FAIL. Check the method is_alive().")
     else:
         print("Test FAIL. Check the method is_alive().")
-
 
     print("=================================================================.")
     print("Test Case 4: Check the defense during a Fight.")
@@ -162,7 +112,6 @@ def main():
         print("Test PASS. The method fight_defense() has been implemented correctly.")
     else:
         print("Test FAIL. Check the method fight_defense().")
-
 
     print("=================================================================.")
     print("Test Case 5: Check the attack during a Fight.")
@@ -184,10 +133,8 @@ def main():
             print("Test FAIL. Check the method fight_attack().")
 
 
-
 # Checking whether this module is executed just itself alone.
 if __name__ == "__main__":
     main()
-
 
 # EOF
