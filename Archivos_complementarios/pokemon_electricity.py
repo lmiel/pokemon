@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from pokemon import Pokemon
+from weapon_type import WeaponType
+from random import randint
 
 """
 This Python module contains not only the class Pokemon, but also the test of
@@ -33,71 +35,29 @@ this Python class.
 
 # Source packages.
 
-
-
-class PokemonElectricity():
-    """Python class to implement a basic version of a Pokemon of the game.
-
-    This Python class implements the basic version of a Pokemon of the game.
-
-    Syntax
-    ------
-      obj = PokemonElectricity(id, pokemon_name, weapon_type, health_points,
-                         attack_rating, defense_rating)
-
-    Parameters
-    ----------
-      [in] id ID of the Pokemon.
-      [in] pokemon_name Name of the Pokemon.
-      [in] weapon_type Type of weapon that carries out the Pokemon.
-      [in] health_points Points of health that the Pokemon has.
-      [in] attack_rating Attack rating of the Pokemon.
-      [in] defense_rating Defense rating of the Pokemon.
-
-    Returns
-    -------
-      obj Python object output parameter that represents an instance
-          of the class Pokemon.
-
-    Attributes
-    ----------
-
-    Example
-    -------
-      >>> from pokemon import Pokemon
-      >>> from weapon_type import WeaponType
-      >>> obj_Pokemon = PokemonEarth(1, "Pikachu", WeaponType.PUNCH, 100, 7, 10)
-    """
+class PokemonElectricity(Pokemon):
+    
+    def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):
+        super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating)
+          
+    def fight_attack(self, pokemon_to_attack):
+        damage = self.attack_rating
+        if randint(0,1) == 1:
+            damage = damage * 2      
+        return pokemon_to_attack.fight_defense(damage)
+    
+    def __str__(self):
+        return "Pokemon ID " + str(self.id) + " with name " + self.pokemon_name + " has as weapon " + self.weapon_type.name + " and health " + str(self.health_points)
 
 
 
 def main():
-    """Function main of the module.
-
-    The function main of this module is used to test the Class that is described
-    in this module.
-
-    Syntax
-    ------
-      [ ] = main()
-
-    Parameters
-    ----------
-      Null .
-
-    Returns
-    -------
-      Null .
-
-    Example
-    -------
-      >>> main()
-    """
 
     print("=================================================================.")
     print("Test Case 1: Create a Pokemon.")
     print("=================================================================.")
-    pokemon_1 = PokemonElectricity(1, "Pikachu", WeaponType.HEADBUTT, 100, 8, 7)
+    pokemon_1 = PokemonElectricity(
+        1, "Pikachu", WeaponType.HEADBUTT, 100, 8, 7)
 
     if pokemon_1.get_pokemon_name() == "Pikachu":
         print("Test PASS. The parameter pokemon_name has been correctly set.")
@@ -124,17 +84,17 @@ def main():
     else:
         print("Test FAIL. Check the method __init__().")
 
-
     print("=================================================================.")
     print("Test Case 2: Human-readable format of the object.")
     print("=================================================================.")
-    pokemon_2 = PokemonElectricity(7, "Pikachu", WeaponType.HEADBUTT, 100, 7, 6)
+    pokemon_2 = PokemonElectricity(
+        7, "Pikachu", WeaponType.HEADBUTT, 100, 7, 6)
 
     if str(pokemon_2) == "Pokemon ID 7 with name Pikachu has as weapon HEADBUTT and health 100":
         print("Test PASS. The human-readable format of the object has been implemented correctly.")
     else:
-        print("Test FAIL. Check the method __str__()." + " RESULT: " + str(pokemon_2))
-
+        print("Test FAIL. Check the method __str__()." +
+              " RESULT: " + str(pokemon_2))
 
     print("=================================================================.")
     print("Test Case 3: Pokemon alive?¿?.")
@@ -142,7 +102,8 @@ def main():
     pokemon_3 = PokemonElectricity(3, "Pikachu", WeaponType.KICK, 97, 8, 7)
 
     if pokemon_3.is_alive():
-        pokemon_was_hit = pokemon_3.fight_defense(200)  # With this the Pokemon should be retired.
+        # With this the Pokemon should be retired.
+        pokemon_was_hit = pokemon_3.fight_defense(200)
 
         if pokemon_was_hit:
             if not pokemon_3.is_alive():
@@ -156,7 +117,6 @@ def main():
                 print("Test FAIL. Check the method is_alive().")
     else:
         print("Test FAIL. Check the method is_alive().")
-
 
     print("=================================================================.")
     print("Test Case 4: Check the defense during a Fight.")
@@ -175,7 +135,6 @@ def main():
             print("Test PASS. The method fight_defense() has been implemented correctly.")
         else:
             print("Test FAIL. Check the method fight_defense().")
-
 
     print("=================================================================.")
     print("Test Case 5: Check the attack during a Fight.")
@@ -197,10 +156,8 @@ def main():
             print("Test FAIL. Check the method fight_attack().")
 
 
-
 # Checking whether this module is executed just itself alone.
 if __name__ == "__main__":
     main()
-
 
 # EOF
