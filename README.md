@@ -1,7 +1,7 @@
 # pokemon
 link : https://github.com/lmiel/pokemon.git
 
-#Ejercicio 1 (5 puntos) <br>
+# Ejercicio 1 (5 puntos) <br>
 
 Pokémon, qué empezó originalmente como un videojuego, gracias a su elevada popularidad logró expandirse a otros medios de entretenimiento como ha sido series de televisión, películas e incluso juegos de cartas.
 
@@ -55,7 +55,7 @@ Para ayudar en el desarrollo de este ejercicio, se le hace entrega de un UML par
 Se facilitan también los archivos vacíos dónde deberán estar implementadas las clases que se piden y que tienen que ser completadas por el alumno. En dichas clases, están ya añadidos los casos de prueba de cada una de ellas.
 
 
-#Ejercicio 2 (2,5 puntos) Tiempo estimado: 20 minutos.<br>
+# Ejercicio 2 (2,5 puntos) Tiempo estimado: 20 minutos.<br>
 
 
 Se propone una extensión del juego propuesto en el ejercicio 4 en la que, en vez de jugar con un solo tipo de Pokémon, se pueda jugar con 4 tipos de Pokémon diferentes: Tierra, Agua, Aire y Electricidad.
@@ -82,7 +82,7 @@ Reutilice tanto código como sea posible del ejercicio 4 para hacer esta extensi
 
 No es necesario implementar el docString correspondiente a las funciones y métodos desarrollados, aunque se recomienda hacerlo para facilitar la comprensión por parte del estudiante.
 
-#Ejercicio 3 (2,5 puntos) Tiempo estimado: 20 minutos.<br>
+# Ejercicio 3 (2,5 puntos) Tiempo estimado: 20 minutos.<br>
 
 
 En este último ejercicio se pide que se implemente el módulo principal del juego. Este módulo principal va a implementar la partida que van a jugar los jugadores, los cuales se encuentran identificados como los entrenadores de los combatientes.
