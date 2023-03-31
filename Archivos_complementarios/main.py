@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from pokemon import Pokemon
 from weapon_type import WeaponType
-
+from random import randint, random
 """
 This Python method contains the application of the Game.
 
@@ -68,22 +68,44 @@ def main():
   list_of_pokemons[1] = pokemons_coach_1
   list_of_pokemons[2] = pokemons_coach_2
 
-  # Get a copy of the list of pokemons:
-  # Choose first pokemons
-  # Main loop.
+  current_round = 1
   while coach_is_undefeated(list_of_pokemons[1]) and coach_is_undefeated(list_of_pokemons[2]):
-    if not list_of_pokemons[1][0].is_alive():
-      list_of_pokemons[1].remove(list_of_pokemons[1][0])
-      if not coach_is_undefeated(list_of_pokemons[1]):
-        break
-    if not list_of_pokemons[2][0].is_alive():
-      list_of_pokemons[2].remove(list_of_pokemons[2][0])
-      if not coach_is_undefeated(list_of_pokemons[2]):
-        break
-      
-      
-      
+    print("Current round: ", current_round)
+    print("------------------------------------------------------------------")
+    
+    pokemon_coach_1 = random.choice(get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons))
+    pokemon_coach_2 = random.choice(get_pokemon_in_a_list_of_pokemons(2, list_of_pokemons))
+    
+    print(pokemon_coach_1.get_pokemon_name(), " is facing ", pokemon_coach_2.get_pokemon_name())
+    print(pokemon_coach_1)
+    print(pokemon_coach_2)
 
+    #Mientras coach 1 y coach 2 esten vivos
+    while pokemon_coach_1.is_alive() and pokemon_coach_2.is_alive():
+      if pokemon_coach_1.fight_attack(pokemon_coach_2):
+        print(pokemon_coach_1.get_pokemon_name(), " attacked ", pokemon_coach_2.get_pokemon_name(), " and caused ", pokemon_coach_1.get_attack_rating(), " damage points")
+      else:
+        print(pokemon_coach_2.get_pokemon_name(), " defended ", pokemon_coach_1.get_pokemon_name(), "'s attack")
+      
+      if pokemon_coach_2.is_alive():
+        if pokemon_coach_2.fight_attack(pokemon_coach_1):
+          print(pokemon_coach_2.get_pokemon_name(), " attacked ", pokemon_coach_1.get_pokemon_name(), " and caused ", pokemon_coach_2.get_attack_rating(), " damage points")
+        else:
+          print(pokemon_coach_1.get_pokemon_name(), " defended ", pokemon_coach_2.get_pokemon_name(), "'s attack")
+      
+      print(pokemon_coach_1)
+      print(pokemon_coach_2)
+      
+    if pokemon_coach_1.is_alive():
+      print(pokemon_coach_1.get_pokemon_name(), " won this round")
+      list_of_pokemons[2].remove(pokemon_coach_2)
+    else:
+      print(pokemon_coach_2.get_pokemon_name(), " won this round")
+      list_of_pokemons[1].remove(pokemon_coach_1)
+    
+    print("------------------------------------------------------------------")
+    current_round += 1
+ 
   print("------------------------------------------------------------------")
   print("The Game has end...")
   print("------------------------------------------------------------------")
@@ -91,14 +113,14 @@ def main():
   print("------------------------------------------------------------------")
   print("Statistics")
   print("------------------------------------------------------------------")
-  print("Game User 1:")
-
-  print("Game User 2:")
+  if coach_is_undefeated(list_of_pokemons[1]):
+    print("Game User 1: won the game!")
+  else:
+    print("Game User 2: won the game!")
 
 
 # Checking whether this module is executed just itself alone.
 if __name__ == "__main__":
     main()
-
 
 # EOF
