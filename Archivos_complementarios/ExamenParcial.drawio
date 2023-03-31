@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram name="UML" id="6133507b-19e7-1e82-6fc7-422aa6c4b21f">
-        <mxGraphModel dx="1342" dy="1898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1095" dy="1470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,6 +31,15 @@
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-38" value="" style="line;html=1;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="NAiFexQSWN1Ocbff_MQO-35" vertex="1">
                     <mxGeometry y="26" width="400" height="8" as="geometry"/>
                 </mxCell>
+                <mxCell id="12" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def main(): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-35">
+                    <mxGeometry y="34" width="400" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __str__(self): str&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-35">
+                    <mxGeometry y="60" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-35">
+                    <mxGeometry y="90" width="400" height="60" as="geometry"/>
+                </mxCell>
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=0;fontColor=#000000;labelBackgroundColor=#000000;strokeColor=#000000;" parent="1" source="NAiFexQSWN1Ocbff_MQO-40" target="NAiFexQSWN1Ocbff_MQO-23" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
@@ -39,6 +48,15 @@
                 </mxCell>
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-43" value="" style="line;html=1;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="NAiFexQSWN1Ocbff_MQO-40" vertex="1">
                     <mxGeometry y="26" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def main(): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-40">
+                    <mxGeometry y="34" width="400" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def fight_defense(self, points_of_damage): Boolean&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-40">
+                    <mxGeometry y="60" width="400" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-40">
+                    <mxGeometry y="86" width="400" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=block;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;labelBackgroundColor=#000000;strokeColor=#000000;" parent="1" source="NAiFexQSWN1Ocbff_MQO-45" target="kpdJz4LMRM3NphF6LxKS-1" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -57,6 +75,15 @@
                 </mxCell>
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-48" value="" style="line;html=1;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="NAiFexQSWN1Ocbff_MQO-45" vertex="1">
                     <mxGeometry y="26" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def main(): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-45">
+                    <mxGeometry y="34" width="400" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def fight_attack(self, pokemon_to_attack): pokemon_to_attack.fight_defense(damage)&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-45">
+                    <mxGeometry y="60" width="400" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating):&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="NAiFexQSWN1Ocbff_MQO-45">
+                    <mxGeometry y="110" width="400" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="NAiFexQSWN1Ocbff_MQO-18" value="Pokemon" style="swimlane;html=1;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="40" y="-519.64" width="400" height="526" as="geometry"/>
@@ -124,10 +151,19 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="7_PFd3bsl0oHoIgsr5rR-6" value="PokemonEarth" style="swimlane;html=1;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
-                    <mxGeometry x="680" y="-839" width="400" height="178" as="geometry"/>
+                    <mxGeometry x="680" y="-839" width="400" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="7_PFd3bsl0oHoIgsr5rR-7" value="" style="line;html=1;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="7_PFd3bsl0oHoIgsr5rR-6" vertex="1">
                     <mxGeometry y="26" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def main(): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="7_PFd3bsl0oHoIgsr5rR-6">
+                    <mxGeometry y="34" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __str__(self): str&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="7_PFd3bsl0oHoIgsr5rR-6">
+                    <mxGeometry y="64" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;+ def __init__(self, id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating): void&lt;/div&gt;&lt;div style=&quot;color: rgb(167, 219, 247); background-color: rgb(1, 22, 39);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="7_PFd3bsl0oHoIgsr5rR-6">
+                    <mxGeometry y="94" width="400" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="7_PFd3bsl0oHoIgsr5rR-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=0;fontColor=#000000;labelBackgroundColor=#000000;strokeColor=#000000;" parent="1" source="7_PFd3bsl0oHoIgsr5rR-6" target="NAiFexQSWN1Ocbff_MQO-19" edge="1">
                     <mxGeometry relative="1" as="geometry">

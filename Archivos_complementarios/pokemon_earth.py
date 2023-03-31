@@ -37,8 +37,7 @@ class PokemonEarth(Pokemon):
         super().__init__(id, pokemon_name, weapon_type, health_points, attack_rating, 0)
         self.defense_rating = defense_rating
         if not isinstance(defense_rating, int) or defense_rating < 11 or defense_rating > 20:
-            raise TypeError(
-                "El defense_rating debe ser un entero entre 11 y 20")
+            raise TypeError("El defense_rating debe ser un entero entre 11 y 20")
 
     def __str__(self):
         return "Pokemon ID " + str(self.id) + " with name " + self.pokemon_name + " has as weapon " + self.weapon_type.name + " and health " + str(self.health_points)

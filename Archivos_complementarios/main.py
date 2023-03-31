@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from pokemon import Pokemon
-from weapon_type import WeaponType
-from random import randint, random
-"""
-This Python method contains the application of the Game.
+from random import random
+
+"""This Python method contains the application of the Game.
 
 @contents :  This module contains the complete implementation of the application
              of the Game.
