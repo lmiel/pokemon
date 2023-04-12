@@ -70,12 +70,18 @@ def main():
   list_of_pokemons[2] = pokemons_coach_2
 
   current_round = 1
+  pokemon_coach_1 = random.choice(get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons))
+  pokemon_coach_2 = random.choice(get_pokemon_in_a_list_of_pokemons(2, list_of_pokemons)) 
+  
   while coach_is_undefeated(list_of_pokemons[1]) and coach_is_undefeated(list_of_pokemons[2]):
     print("Current round: ", current_round)
     print("------------------------------------------------------------------")
     
-    pokemon_coach_1 = random.choice(get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons))
-    pokemon_coach_2 = random.choice(get_pokemon_in_a_list_of_pokemons(2, list_of_pokemons))
+    if pokemon_coach_1.is_alive():
+      pokemon_coach_2 = random.choice(get_pokemon_in_a_list_of_pokemons(2, list_of_pokemons))
+    else:
+      pokemon_coach_1 = random.choice(get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons))
+
     
     print(pokemon_coach_1.get_pokemon_name(), " is facing ", pokemon_coach_2.get_pokemon_name())
     print(pokemon_coach_1)
@@ -110,7 +116,7 @@ def main():
     current_round += 1
  
   print("------------------------------------------------------------------")
-  print("The Game has end...")
+  print("The Game has ended")
   print("------------------------------------------------------------------")
 
   print("------------------------------------------------------------------")
