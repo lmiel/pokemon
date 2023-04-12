@@ -16,7 +16,7 @@ class WeaponType(Enum):
         elif weapon_type == "kick":
             return WeaponType.KICK
         elif weapon_type == "elbow":
-            return WeaponType.ELBUTT
+            return WeaponType.ELBOW
         elif weapon_type == "headbutt":
             return WeaponType.HEADBUTT
         else:

@@ -16,7 +16,7 @@ class Pokemon():
             raise TypeError("El weapon_type debe ser un weapon_type")
         self.health_points = health_points
         if not isinstance(health_points, int) or health_points < 0 or health_points > 100:
-            raise TypeError("El id debe ser un entero entre 0 y 100")
+            raise TypeError("Los health_points deben ser un entero entre 0 y 100")
         self.attack_rating = attack_rating
         if not isinstance(attack_rating, int) or attack_rating < 0 or attack_rating > 10:
             raise TypeError("El attack_rating debe ser un entero entre 0 y 10")
@@ -34,7 +34,7 @@ class Pokemon():
         if self.defense_rating > points_of_damage:
             return False
         else:
-            self.health_points = self.health_points - (points_of_damage - self.defense_rating)
+            self.health_points = max(self.health_points - (points_of_damage - self.defense_rating),0)
             return True
         
     def fight_attack(self, pokemon_to_attack):
