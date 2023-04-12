@@ -8,7 +8,20 @@ class WeaponType(Enum):
     KICK = 4
     ELBOW = 6
     HEADBUTT = 10
-
+    
+    @staticmethod
+    def string_to_Weapon_Type(weapon_type):
+        if weapon_type == "punch":
+            return WeaponType.PUNCH
+        elif weapon_type == "kick":
+            return WeaponType.KICK
+        elif weapon_type == "elbow":
+            return WeaponType.ELBUTT
+        elif weapon_type == "headbutt":
+            return WeaponType.HEADBUTT
+        else:
+            return None
+    
 
 def main():
     print("=================================================================.")

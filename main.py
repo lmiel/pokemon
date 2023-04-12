@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from pokemon import Pokemon
 from random import random
-
+import os
 """This Python method contains the application of the Game.
 
 @contents :  This module contains the complete implementation of the application
@@ -30,13 +30,14 @@ from random import random
 """
 
 # Source packages.
+print("Directorio actual: ", os.getcwd())
 
 def get_data_from_user(name_file):
   lista_pokemon = []
   file = open(name_file, "r")
   for linea in file.readlines():
     pokemon = linea.split(",") #para cada linea del fichero, separamos los datos por comas y los guardamos en una lista
-    lista_pokemon.append(Pokemon(pokemon[0], pokemon[1], pokemon[2], pokemon[3], pokemon[4], pokemon[5])) #id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating
+    lista_pokemon.append(Pokemon(int(pokemon[0]), pokemon[1], pokemon[2], pokemon[3], pokemon[4], pokemon[5])) #id, pokemon_name, weapon_type, health_points, attack_rating, defense_rating
   return lista_pokemon
 
 def get_pokemon_in_a_list_of_pokemons(coach_to_ask, list_of_pokemons):
