@@ -69,6 +69,9 @@ def main():
   list_of_pokemons[1] = pokemons_coach_1
   list_of_pokemons[2] = pokemons_coach_2
 
+  all_pokemons_coach_1 = list_of_pokemons[1][:]
+  all_pokemons_coach_2 = list_of_pokemons[2][:]
+
   current_round = 1
   pokemon_coach_1 = random.choice(get_pokemon_in_a_list_of_pokemons(1, list_of_pokemons))
   pokemon_coach_2 = random.choice(get_pokemon_in_a_list_of_pokemons(2, list_of_pokemons)) 
@@ -122,6 +125,23 @@ def main():
   print("------------------------------------------------------------------")
   print("Statistics")
   print("------------------------------------------------------------------")
+  
+  print("Coach 1 had ", len(all_pokemons_coach_1), " pokemons")
+  
+  for pokemon in all_pokemons_coach_1:
+    if pokemon.is_alive():
+      print(pokemon.get_pokemon_name(), " is alive and has ", pokemon.get_health_points(), " health points")
+    else:
+      print(pokemon.get_pokemon_name(), " is dead :(")
+      
+  print("Coach 2 had ", len(all_pokemons_coach_2), " pokemons")
+
+  for pokemon in all_pokemons_coach_2:
+    if pokemon.is_alive():
+      print(pokemon.get_pokemon_name(), " is alive and has ", pokemon.get_health_points(), " health points")
+    else:
+      print(pokemon.get_pokemon_name(), " is dead :(")
+    
   if coach_is_undefeated(list_of_pokemons[1]):
     print("Game User 1: won the game!")
   else:
